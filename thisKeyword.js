@@ -1,8 +1,8 @@
 // Kuno ekti function ke diffrent context e re-use korar jonno "this" keyword use hoy
-// implicit binding :kun jaygay call hoyeche dot er age ki ache....
-// explicit binding
-// new binding 
-// window binding 
+// implicit binding :kun jaygay call hoyeche, dot er age ki ache.... dot notation diye access koraza
+// explicit binding: call(), apply(), bind() method diye access korte hoy
+// new binding : constructor function/class e new keyword diye access korte hoy
+// window binding: protom 3tar kuno tii na hole "this" keyword window ke poin kore.
 
 
 var msa={
@@ -54,10 +54,17 @@ const vertue3='Patience'
 //explict this by bind() method
 //bind() method function er instance/function return kore, zeti call korle value paway zay. bind() method er maddhyome kuno ekti object er method dhar-reen kore onno arekti object e use kora za
 const bindFunc=printName.bind(msa,vertue1,vertue2,vertue3)
-console.log(bindFunc()); //MSA is Polite, Smart and Patience
+// console.log(bindFunc()); //MSA is Polite, Smart and Patience
 
-//new binding
+//new binding new keyword diye constructor function call kora
+function Person(name,age){
+    this.name=name 
+    this.age=age 
+   console.log(`${this.name} is ${this.age} years old!`)}
+        
 
+const msa3=new Person('MSA',24)
+console.log(msa3);
 
 
 
