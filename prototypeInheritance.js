@@ -27,8 +27,11 @@ Cricketer.prototype=Object.create(Person.prototype)
 Cricketer.prototype.constructor=Cricketer
 
 const msa=new Cricketer('MSA',24,'Wicket-Keeper','Bangladesh')
-// msa.prototype.reading=function(){
-//     console.log(`${this.name} is reading now`);
-// }
+Cricketer.prototype.reading=function(){
+    console.log(`${this.name} is reading now`);
+    
+}
 console.log(msa); // {name: 'MSA', age: 24, type: 'Wicket-Keeper', country: 'Bangladesh'}
+//prototype method access kora zay
+console.log(msa.reading()) // MSA is reading now
 
