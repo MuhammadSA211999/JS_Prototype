@@ -29,13 +29,23 @@ class Cricketer extends Person{
     set setType(newType){
         this.type=newType
     }
+    //static
+    static isEqualAge(cricketer1,cricketer2){
+        //static method e this er value nei, this direct class name ke point kore
+        return cricketer1.age===cricketer2.age
+    }
 }
 
 const msa=new Cricketer('MSA',24,'Wicket-Keeper','Bangladesh')
+const pvs=new Cricketer('Parves',29,'Batsman','Bangladesh')
 console.log(msa) //{name: 'MSA', age: 24, country: 'Bangladesh', type: 'Wicket-Keeper'}
-msa.playing() //MSA is playing
-console.log('from gtter',msa.getName);
-msa.setType='Batsman'
-console.log('from setType',msa.type);
+// msa.playing() //MSA is playing
+// console.log('from gtter',msa.getName);
+// msa.setType='Batsman'
+// console.log('from setType',msa.type);
+//static method
+const staticValue=Cricketer.isEqualAge(msa,pvs)
+console.log(staticValue); //false
+
 
 
