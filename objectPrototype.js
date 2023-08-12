@@ -44,7 +44,7 @@ function Human(name,age){
 }
 const student=Human('MSA',30)
 console.log(student); //{name:'MSA',age:30} parent er kuno method visible na,tobe dot diye accsess kora zabe
-console.log(student.eating); //ƒ eating(){console.log(`${this.name} is eating!`);}
+console.log(student.eating()); // MSA is eating!
 
 
 
