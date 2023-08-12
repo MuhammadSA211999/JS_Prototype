@@ -21,6 +21,12 @@ class Cricketer extends Person{
         console.log(`${this.name} is playing`);
         
     }
+    //polymorphism of extended super class method
+    eating(){
+        super.eating()
+        console.log(`The man ${this.name} is eating`);
+        
+    }
     //getter
     get getName(){
         return this.name
@@ -31,7 +37,8 @@ class Cricketer extends Person{
     }
     //static
     static isEqualAge(cricketer1,cricketer2){
-        //static method e this er value nei, this direct class name ke point kore
+        // static method e this er value nei, this direct class name ke point kore
+        // static method instance e pawya zay na. 
         return cricketer1.age===cricketer2.age
     }
 }
@@ -46,6 +53,8 @@ console.log(msa) //{name: 'MSA', age: 24, country: 'Bangladesh', type: 'Wicket-K
 //static method
 const staticValue=Cricketer.isEqualAge(msa,pvs)
 console.log(staticValue); //false
+//polymorphism
+console.log(msa.eating()); // (MSA is eating: from parent class Person) // (The man MSA is eating: from sub class Cricketer)
 
 
 
