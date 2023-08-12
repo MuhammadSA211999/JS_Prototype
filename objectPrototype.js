@@ -32,8 +32,22 @@ const dev={
 }
 const msa=Object.create(dev)
 //Object.create() method er maddhyome parent er sob propert and methods child access korte pare. Eta hoy __proto__ method er karone.
+// Zodi Object.create() method er maddyome kuno object create kora hoy, tahole create kora notun object __proto__() method er maddyome parent object er sob property notun child object access korte pare.
 console.log(msa); // {} blank object
 console.log(msa.name); // MSA
+
+function Human(name,age){
+    let person=Object.create(personMethods)
+    person.name=name
+    person.age=age
+    return person
+}
+const student=Human('MSA',30)
+console.log(student); //{name:'MSA',age:30} parent er kuno method visible na,tobe dot diye accsess kora zabe
+console.log(student.eating); //ƒ eating(){console.log(`${this.name} is eating!`);}
+
+
+
 
 
 
